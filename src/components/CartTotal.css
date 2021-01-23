@@ -1,0 +1,6 @@
+.CartTotal {
+  /*background-color: brown;*/
+  background-color: white;
+  height: 200px;
+  flex: 0.3;
+}

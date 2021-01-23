@@ -1,12 +1,17 @@
 import React from "react";
+import CartItem from "./CartItem";
 import "./CartItems.css";
 
-const CartItem = () => {
+const CartItems = () => {
   return (
     <div className="CartItems">
-      <h1>Car Items</h1>
+      <h1>Shopping Cart</h1>
+      <hr />
+      <div className="CartItems-items">
+        <CartItem />
+      </div>
     </div>
   );
 };
 
-export default CartItem;
+export default CartItems;

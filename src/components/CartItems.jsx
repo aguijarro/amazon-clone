@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "./CartItem";
 import "./CartItems.css";
 
-const CartItems = () => {
+const CartItems = ({ items }) => {
   return (
     <div className="CartItems">
       <h1>Shopping Cart</h1>

@@ -8,7 +8,9 @@ const CartItems = ({ items }) => {
       <h1>Shopping Cart</h1>
       <hr />
       <div className="CartItems-items">
-        <CartItem />
+        {items.map((item, index) => {
+          return <CartItem item={item} key={index} />;
+        })}
       </div>
     </div>
   );

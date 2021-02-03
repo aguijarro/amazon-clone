@@ -13,7 +13,6 @@ const CartTotal = ({ items }) => {
 
   const getTotalItems = () => {
     let total = 0;
-    console.log(items);
     items.forEach((item) => {
       total += item.quantity;
     });

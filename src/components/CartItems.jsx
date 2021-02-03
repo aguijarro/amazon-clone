@@ -4,10 +4,8 @@ import "./CartItems.css";
 
 const CartItems = ({ items, setCartItems }) => {
   const changeItemQuantity = (e, index) => {
-    console.log("Index", index);
-    console.log(e.target.value);
     const newItems = [...items];
-    newItems[index].quantity = e.target.value;
+    newItems[index].quantity = parseInt(e.target.value);
     setCartItems(newItems);
   };
 

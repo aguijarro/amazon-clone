@@ -11,13 +11,23 @@ const CartItem = ({ index, item, changeItemQuantity, deleteItem }) => {
         <div className="info-title">
           <h2> {item.title}</h2>
         </div>
-        <div className="info-stock"> {item.stock} </div>
+
+        <div className="info-stock">
+          {item.quantity === 0 ? (
+            <span style={{ backgroundColor: "red", color: "white" }}>
+              Out Stock
+            </span>
+          ) : (
+            item.stock
+          )}
+        </div>
         <div className="item-actions">
           <div className="item-quantity">
             <select
               value={item.quantity}
               onChange={(e) => changeItemQuantity(e, index)}
             >
+              <option value="0">Qty:0</option>
               <option value="1">Qty:1</option>
               <option value="2">Qty:2</option>
               <option value="3">Qty:3</option>
